@@ -27,34 +27,45 @@ body {
 }
 
 .menu-btn {
-  font-size: $menu-btn-size;
+  font-size: 30px;
   cursor: pointer;
   position: fixed;
   top: 20px;
   right: 20px;
   z-index: 1;
-  color: $menu-btn-color;
+  color: #fff;
   transition: 0.5s;
   z-index: 4;
 
   span {
-    display: block;
-    background-color: $menu-btn-color;
-    height: 3px;
-    width: $menu-btn-size;
-    margin: 6px 0;
-    transition: 0.5s;
+      display: block;
+      background-color: #fff;
+      height: 3px;
+      width: 30px;
+      margin: 6px 0;
+      transition: 0.5s;
   }
 }
 
-// Estilos del menú
+#menu-toggle:checked + .menu-btn span:nth-child(1) {
+  opacity: 0;
+}
+
+#menu-toggle:checked + .menu-btn span:nth-child(2) {
+  transform: rotate(45deg) translate(0, 0);
+}
+
+#menu-toggle:checked + .menu-btn span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
 #menu {
   position: fixed;
   top: 0;
   right: -250px;
   width: 250px;
   height: 100%;
-  background-color: $menu-bg-color;
+  background-color: #00000086;
   padding-top: 60px;
   transition: 0.5s;
   z-index: 3;
@@ -73,7 +84,7 @@ body {
   transition: 0.3s;
 
   &:hover {
-    color: $menu-link-hover-color;
+      color: $menu-link-hover-color;
   }
 }
 
@@ -259,7 +270,6 @@ footer {
     max-width: 100%;
     height: auto;
     display: flex;
-    flex-direction: row;
     width: 30vw; // Ajusta el tamaño máximo del logo según tus preferencias
     
   }
