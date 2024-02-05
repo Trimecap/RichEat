@@ -1,0 +1,352 @@
+// Variables
+$menu-bg-color: #00000086;
+$menu-btn-color: #fff;
+$menu-link-color: #BA966E;
+$menu-link-hover-color: #f1f1f1;
+$menu-btn-size: 30px;
+$overlay-bg-color: rgba(0, 0, 0, 0.5);
+$text-color: #BA966E;
+$font-family-k2d: "K2D", sans-serif; // Nueva variable para la fuente "K2D"
+$footer-bg-color: #1a1a1a;
+$footer-text-color: #fff;
+$footer-padding: 2%; // Ajustado a porcentaje para ser responsive
+.k2d-semibold {
+  font-family: $font-family-k2d;
+  font-weight: 600;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: $font-family-k2d; // Aplicar la fuente a todo el body
+}
+
+// Estilos del toggle
+#menu-toggle {
+  display: none;
+}
+
+.menu-btn {
+  font-size: $menu-btn-size;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+  color: $menu-btn-color;
+  transition: 0.5s;
+  z-index: 4;
+
+  span {
+    display: block;
+    background-color: $menu-btn-color;
+    height: 3px;
+    width: $menu-btn-size;
+    margin: 6px 0;
+    transition: 0.5s;
+  }
+}
+
+// Estilos del menú
+#menu {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: $menu-bg-color;
+  padding-top: 60px;
+  transition: 0.5s;
+  z-index: 3;
+}
+
+#menu-toggle:checked + .menu-btn + #menu {
+  right: 0;
+}
+
+#menu a {
+  padding: 15px;
+  text-decoration: none;
+  font-size: 20px;
+  color: $menu-link-color;
+  display: block;
+  transition: 0.3s;
+
+  &:hover {
+    color: $menu-link-hover-color;
+  }
+}
+
+header {
+  position: relative;
+  width: 100%;
+  height: 100vh; // Cambiado a 100% de la altura de la vista en pantalla
+}
+
+#videoFondo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $overlay-bg-color;
+  z-index: 2;
+}
+
+.contenido-header {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 35%;
+    z-index: 2;
+  }
+
+  h1 {
+    font-size: 300%;
+    width: 55%;
+    color: $text-color;
+    margin: 0;
+    z-index: 5;
+    text-align: center;
+  }
+}
+
+
+// Estilos para el contenedor de los cubos
+.cubos-wrapper {
+  margin: 20px auto; // Ajusta el margen para centrarlo y evitar superposición
+  padding: 20px; // Ajusta el relleno para separarlos del header
+}
+
+// Estilos para los cubos
+.cubos-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr; // Cambia a una columna cuando el ancho de la pantalla es 1200px o menos
+  }
+}
+
+
+
+.cubo {
+  position: relative;
+  padding-bottom: 100%;
+  width: 100%;
+  overflow: hidden;
+
+  .cubo-contenido {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    p {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $text-color; // Cambia según tus preferencias
+      text-align: center;
+      font-size: 1.5em; // Cambia según tus preferencias
+      z-index: 2;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); // Cambia el valor para ajustar la oscuridad
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1; // Asegura que esté por encima del contenido
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+#scroll-animate
+{
+  overflow: hidden;
+}
+
+#scroll-animate-main
+{
+  width: 100%;
+  left: 0;
+  position: fixed;
+}
+
+#heightPage,
+#heightScroll
+{
+  width: 10px;
+  top: 0;
+  position: absolute;
+  z-index: 99;
+}
+
+#heightPage
+{
+  left: 0;
+}
+
+#heightScroll
+{
+  right: 0;
+}
+
+header
+{
+  width: 100%;
+  height: 100%;
+  background: url(https://raw.githubusercontent.com/hudsonmarinho/header-and-footer-parallax-effect/master/assets/images/bg-header.jpg) no-repeat 50% 50%;
+  top: 0;
+  position: fixed;
+  z-index: -1;
+}
+
+footer {
+  width: 100%;
+  height: 50vh; // Ajusta la altura según tus preferencias
+  background: $footer-bg-color;
+  color: $footer-text-color;
+  bottom: -50vh; // Ajusta la posición inicial según la altura del footer
+  position: fixed;
+  z-index: -1;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+  }
+
+  .footer-logo img {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    width: 30vw; // Ajusta el tamaño máximo del logo según tus preferencias
+    
+  }
+
+  .footer-divider {
+    height: 80px; // Ajusta la altura del hr vertical según tus preferencias
+    border-left: 2px solid $footer-text-color; // Ajusta el color del hr según tus preferencias
+    margin: 0 20px; // Ajusta el margen entre el logo y las redes sociales
+  }
+
+  .footer-social {
+    display: flex;
+    align-items: center;
+
+    a {
+      margin: 0 10px;
+      position: relative;
+
+      img {
+        max-width: 100%;
+        height: auto;
+        width: 4vw; // Ajusta el tamaño máximo de los iconos según tus preferencias
+        transition: filter 0.3s;
+      }
+
+      &:hover {
+        img {
+          filter: brightness(70%);
+        }
+      }
+    }
+  }
+}
+
+
+.content
+{
+  height: 1000px;
+  min-height: 1000px;
+  background: #ededed;
+  position: relative;
+  z-index: 1;
+}
+
+.wrapper-parallax {
+  margin-top: 100%;
+  margin-bottom: 300px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+h1{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: Helvetica;
+  font-size: 150px;
+  color: #fff;
+}
+
+
+
+.content h1{
+  line-height: 1000px;
+  color: #999;
+}
+
+footer h1
+{
+  line-height: 300px;
+}
+
+header,
+footer,
+#scroll-animate-main
+{
+  -webkit-transition-property: all;
+     -moz-transition-property: all;
+      transition-property: all;
+
+  -webkit-transition-duration: 0.4s;
+     -moz-transition-duration: 0.4s;
+      transition-duration: 0.4s;
+
+  -webkit-transition-timing-function: cubic-bezier(0, 0, 0, 1);
+     -moz-transition-timing-function: cubic-bezier(0, 0, 0, 1);
+      transition-timing-function: cubic-bezier(0, 0, 0, 1);
+}
