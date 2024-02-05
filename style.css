@@ -109,7 +109,8 @@ header {
   justify-content: center;
 }
 .contenido-header img {
-  width: 35%;
+  margin-top: 15%;
+  width: 20%;
   z-index: 2;
 }
 .contenido-header h1 {
@@ -235,7 +236,7 @@ footer .footer-logo img {
   max-width: 100%;
   height: auto;
   display: flex;
-  width: 30vw;
+  width: 15vw;
 }
 footer .footer-divider {
   height: 80px;
