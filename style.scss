@@ -24,6 +24,7 @@ body {
 // Estilos del toggle
 #menu-toggle {
   display: none;
+  
 }
 
 .menu-btn {
@@ -39,7 +40,7 @@ body {
 
   span {
       display: block;
-      background-color: #fff;
+      background-color: $text-color;
       height: 3px;
       width: 30px;
       margin: 6px 0;
@@ -178,10 +179,15 @@ header {
 
     p {
       position: absolute;
+      display: inline-block;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      color: $text-color; // Cambia según tus preferencias
+      color: black;
+      background-color: $text-color; // Cambia según tus preferencias
+      border: #BA966E, solid, 2px;
+      opacity: 83%;
+      border-radius: 10px;
       text-align: center;
       font-size: 1.5em; // Cambia según tus preferencias
       z-index: 2;
@@ -306,6 +312,25 @@ footer {
 }
 
 
+@media screen and (max-width: 768px) {
+  .footer-logo img {
+    width: 20vw; // Reducir el tamaño del logo en dispositivos móviles
+    margin-right: 10px; // Reducir el margen derecho del logo en dispositivos móviles
+  }
+
+  .footer-divider {
+    display: none; // Ocultar el hr vertical en dispositivos móviles
+  }
+
+  .footer-social {
+    a {
+      margin-right: 5px; // Reducir el margen entre los iconos de redes sociales en dispositivos móviles
+    }
+  }
+}
+
+
+
 .content
 {
   height: 1000px;
@@ -361,3 +386,4 @@ footer,
      -moz-transition-timing-function: cubic-bezier(0, 0, 0, 1);
       transition-timing-function: cubic-bezier(0, 0, 0, 1);
 }
+

@@ -1,0 +1,222 @@
+.k2d-semibold {
+  font-family: "K2D", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+body {
+  background-color: #1c1c1c;
+  color: #fff;
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-btn {
+  font-size: 30px;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+  color: #fff;
+  transition: 0.5s;
+  z-index: 4;
+}
+.menu-btn span {
+  display: block;
+  background-color: #BA966E;
+  height: 3px;
+  width: 30px;
+  margin: 6px 0;
+  transition: 0.5s;
+}
+
+#menu-toggle:checked + .menu-btn span:nth-child(1) {
+  opacity: 0;
+}
+
+#menu-toggle:checked + .menu-btn span:nth-child(2) {
+  transform: rotate(45deg) translate(0, 0);
+}
+
+#menu-toggle:checked + .menu-btn span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+#menu {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5254901961);
+  padding-top: 60px;
+  transition: 0.5s;
+  z-index: 3;
+}
+
+#menu-toggle:checked + .menu-btn + #menu {
+  right: 0;
+}
+
+#menu a {
+  padding: 15px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #BA966E;
+  display: block;
+  transition: 0.3s;
+}
+#menu a:hover {
+  color: #f1f1f1;
+}
+
+h2 {
+  text-align: left;
+  color: #BA966E;
+  margin-bottom: 1em;
+}
+
+.reservation-form {
+  background-color: #333;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  margin: 0 auto;
+}
+.reservation-form .form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 5%;
+}
+.reservation-form .form-group {
+  margin-bottom: 1em;
+}
+.reservation-form .form-group label {
+  color: white;
+  font-size: 0.9em;
+}
+.reservation-form .form-group input[type=text],
+.reservation-form .form-group input[type=email],
+.reservation-form .form-group input[type=tel],
+.reservation-form .form-group input[type=date],
+.reservation-form .form-group input[type=time],
+.reservation-form .form-group input[type=number],
+.reservation-form .form-group textarea {
+  width: 100%;
+  padding: 0.5em;
+  border-radius: 5px;
+  border: none;
+  font-size: 1em;
+  background-color: #555;
+  color: #fff;
+}
+.reservation-form .form-group textarea {
+  resize: vertical;
+}
+.reservation-form .full-width {
+  width: 100%;
+}
+.reservation-form button[type=submit] {
+  background-color: #BA966E;
+  color: #fff;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+.reservation-form button[type=submit]:hover {
+  background-color: #8a714e;
+}
+
+@media screen and (max-width: 768px) {
+  .reservation-form {
+    padding: 1.5em;
+  }
+  .reservation-form h2 {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+  }
+  .reservation-form .form-group {
+    margin-bottom: 1em;
+  }
+  .reservation-form .form-group label {
+    font-size: 0.8em;
+  }
+  .reservation-form .form-group input[type=text],
+  .reservation-form .form-group input[type=email],
+  .reservation-form .form-group input[type=tel],
+  .reservation-form .form-group input[type=date],
+  .reservation-form .form-group input[type=time],
+  .reservation-form .form-group input[type=number],
+  .reservation-form .form-group textarea {
+    padding: 0.8em;
+    font-size: 0.9em;
+  }
+  .reservation-form button[type=submit] {
+    padding: 0.5em 1em;
+    font-size: 1em;
+  }
+}
+footer {
+  width: 100%;
+  background: #1a1a1a;
+  color: #fff;
+  padding: 2%;
+}
+footer .footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: calc(100% - 4%);
+  margin: 0 auto;
+}
+footer .footer-logo img {
+  max-width: 100%;
+  height: auto;
+  width: 10vw;
+  margin-right: 20px;
+}
+footer .footer-divider {
+  height: 80px;
+  border-left: 2px solid #fff;
+  margin: 0 20px;
+}
+footer .footer-social {
+  display: flex;
+  align-items: center;
+}
+footer .footer-social a {
+  margin-right: 10px;
+  position: relative;
+}
+footer .footer-social a img {
+  max-width: 100%;
+  height: auto;
+  width: 3vw;
+  transition: filter 0.3s;
+}
+footer .footer-social a:hover img {
+  filter: brightness(70%);
+}
+
+@media screen and (max-width: 768px) {
+  .footer-logo img {
+    width: 20vw;
+    margin-right: 10px;
+  }
+  .footer-divider {
+    display: none;
+  }
+  .footer-social a {
+    margin-right: 5px;
+  }
+}/*# sourceMappingURL=style.css.map */

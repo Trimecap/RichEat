@@ -26,7 +26,7 @@ body {
 }
 .menu-btn span {
   display: block;
-  background-color: #fff;
+  background-color: #BA966E;
   height: 3px;
   width: 30px;
   margin: 6px 0;
@@ -158,10 +158,15 @@ header {
 }
 .cubo .cubo-contenido p {
   position: absolute;
+  display: inline-block;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #BA966E;
+  color: black;
+  background-color: #BA966E;
+  border: #BA966E, solid, 2px;
+  opacity: 83%;
+  border-radius: 10px;
   text-align: center;
   font-size: 1.5em;
   z-index: 2;
@@ -261,6 +266,18 @@ footer .footer-social a:hover img {
   filter: brightness(70%);
 }
 
+@media screen and (max-width: 768px) {
+  .footer-logo img {
+    width: 20vw;
+    margin-right: 10px;
+  }
+  .footer-divider {
+    display: none;
+  }
+  .footer-social a {
+    margin-right: 5px;
+  }
+}
 .content {
   height: 1000px;
   min-height: 1000px;

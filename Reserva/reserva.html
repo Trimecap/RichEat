@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    <div id="menu">
+        <a href="../index.html">Home</a>
+        <a href="./menu/menu.html">Menú</a>
+        <a href="./SobreNosotros/sobre_nosotros.html">Contacto</a>
+    </div>
+    <h2>Reservar Mesa</h2>
+    <hr>
+    <div class="reservation-form">
+        <form action="#" method="post">
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" id="name" name="name" placeholder="Nombre" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <input type="tel" id="phone" name="phone" placeholder="Teléfono" required>
+            </div>
+            <div class="form-group">
+              <input type="date" id="date" name="date" placeholder="Fecha" required>
+            </div>
+            <div class="form-group">
+                <label for="time">Hora</label>
+              <input type="time" id="time" name="time" placeholder="Hora" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group full-width">
+                <label for="guests">Comensales</label>
+              <input type="number" id="guests" name="guests" placeholder="Comensales" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" rows="4" placeholder="Mensaje (opcional)"></textarea>
+          </div>
+          <button type="submit">Enviar Reserva</button>
+        </form>
+      </div>
+      <footer>
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="../img/rich eat.png" alt="Logo del restaurante">
+          </div>
+          <div class="footer-divider"></div>
+          <div class="footer-social">
+            <a href="#" target="_blank">
+              <img src="../img/2023_Facebook_icon.svg.webp" alt="Facebook">
+            </a>
+            <a href="#" target="_blank">
+              <img src="../img/X_logo_2023_(white).png" alt="Twitter">
+            </a>
+            <a href="#" target="_blank">
+              <img src="../img/Instagram_icon.png" alt="Instagram">
+            </a>
+          </div>
+        </div>
+      </footer>        
+</body>
+</html>
