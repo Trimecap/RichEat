@@ -1,11 +1,10 @@
-// Variables
 $body-background-color: #1c1c1c;
 $text-colorform: #fff;
 $form-background-color: #333;
 $form-input-background: #555;
 $form-button-background: #BA966E;
 $form-button-hover-background: #8a714e;
-$font-family-k2d: "K2D", sans-serif; // Nueva variable para la fuente "K2D"
+$font-family-k2d: "K2D"; 
 $menu-link-color: #BA966E;
 $menu-link-hover-color: #f1f1f1;
 $menu-btn-size: 30px;
@@ -88,6 +87,7 @@ body {
     color: $menu-link-color;
     display: block;
     transition: 0.3s;
+    font-family: $font-family-k2d;
   
     &:hover {
         color: $menu-link-hover-color;
@@ -101,6 +101,7 @@ body {
 h2 {
     text-align: left;
     color: $form-button-background;
+    font-family: $font-family-k2d;
     margin-bottom: 1em; 
   }
 
@@ -125,7 +126,8 @@ h2 {
 
     label {
       color: lighten($text-colorform, 25%);
-      font-size: 0.9em; // Tamaño de fuente de las etiquetas
+      font-size: 0.9em; 
+      font-family: $font-family-k2d
     }
 
     input[type="text"],
@@ -136,11 +138,12 @@ h2 {
     input[type="number"],
     textarea {
       width: 100%;
-      padding: 0.5em; // Ajuste del relleno interior de los campos de entrada
+      padding: 0.5em; 
       border-radius: 5px;
       border: none;
-      font-size: 1em; // Tamaño de fuente de los campos de entrada
+      font-size: 1em; 
       background-color: $form-input-background;
+      font-family: $font-family-k2d;
       color: $text-colorform;
     }
 
@@ -157,10 +160,10 @@ h2 {
     background-color: $form-button-background;
     color: $text-colorform;
     border: none;
-    padding: 0.5em 1em; // Ajuste del relleno interior del botón
+    padding: 0.5em 1em; 
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1em; // Tamaño de fuente del botón
+    font-size: 1em; 
     transition: background-color 0.3s ease;
 
     &:hover {
@@ -170,16 +173,11 @@ h2 {
 }
 
 
-  
-
-
-// Media query para dispositivos con una anchura máxima de 768px
 @media screen and (max-width: 768px) {
   .reservation-form {
-    padding: 1.5em; // Ajuste del espacio interior del formulario en dispositivos móviles
-
+    padding: 1.5em; 
     h2 {
-      font-size: 1.2em; // Tamaño de fuente del título en dispositivos móviles
+      font-size: 1.2em; 
       margin-bottom: 1em;
     }
 
@@ -187,7 +185,7 @@ h2 {
       margin-bottom: 1em;
 
       label {
-        font-size: 0.8em; // Tamaño de fuente de las etiquetas en dispositivos móviles
+        font-size: 0.8em; 
       }
 
       input[type="text"],
@@ -197,14 +195,15 @@ h2 {
       input[type="time"],
       input[type="number"],
       textarea {
-        padding: 0.8em; // Ajuste del relleno interior de los campos de entrada en dispositivos móviles
-        font-size: 0.9em; // Tamaño de fuente de los campos de entrada en dispositivos móviles
+        padding: 0.8em; 
+        font-size: 0.9em; 
       }
     }
 
     button[type="submit"] {
-      padding: 0.5em 1em; // Ajuste del relleno interior del botón en dispositivos móviles
-      font-size: 1em; // Tamaño de fuente del botón en dispositivos móviles
+      font-family: $font-family-k2d;
+      padding: 0.5em 1em; 
+      font-size: 1em; 
     }
   }
 }
@@ -220,8 +219,8 @@ footer {
     flex-wrap: wrap; 
     justify-content: space-between; 
     align-items: center;
-    max-width: calc(100% - #{$footer-padding * 2}); // Ajustar el ancho máximo del contenido para que quepa dentro del padding del footer
-    margin: 0 auto; // Centrar el contenido dentro del footer
+    max-width: calc(100% - #{$footer-padding * 2}); 
+    margin: 0 auto; 
   }
 
   .footer-logo img {
@@ -232,7 +231,7 @@ footer {
   }
 
   .footer-divider {
-    height: 80px; // Ajusta la altura del hr vertical según tus preferencias
+    height: 80px; 
     border-left: 2px solid $footer-text-color; 
     margin: 0 20px; 
   }
@@ -244,6 +243,7 @@ footer {
     a {
       margin-right: 10px; 
       position: relative;
+      font-family: $font-family-k2d;
 
       img {
         max-width: 100%;
@@ -263,17 +263,17 @@ footer {
 
 @media screen and (max-width: 768px) {
     .footer-logo img {
-      width: 20vw; // Reducir el tamaño del logo en dispositivos móviles
-      margin-right: 10px; // Reducir el margen derecho del logo en dispositivos móviles
+      width: 20vw; 
+      margin-right: 10px; 
     }
 
     .footer-divider {
-      display: none; // Ocultar el hr vertical en dispositivos móviles
+      display: none; 
     }
 
     .footer-social {
       a {
-        margin-right: 5px; // Reducir el margen entre los iconos de redes sociales en dispositivos móviles
+        margin-right: 5px; 
       }
     }
   }

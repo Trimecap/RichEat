@@ -22,12 +22,12 @@ $(document).ready(function () {
         heightDocument =
             windowHeight + $(".cubos-container").height() + footerHeight - 20;
 
-        // Definindo o tamanho do elemento pra animar
+        // Definir el tamaño del elemento para animar
         $("#scroll-animate, #scroll-animate-main").css({
             height: heightDocument + "px"
         });
 
-        // Definindo o tamanho dos elementos header e conteúdo
+        // Definir el tamaño de los elementos header y contenido
         $("header").css({
             height: windowHeight + "px",
             "line-height": windowHeight + "px"
@@ -40,15 +40,15 @@ $(document).ready(function () {
         scrollFooter(window.scrollY);
     }
 
-    // Chamando a função de ajuste de layout ao carregar a página
+    // Llamar a la función de ajuste de diseño al cargar la página
     adjustLayout();
 
-    // Chamando a função de ajuste de layout ao redimensionar a janela
+    // Llamar a la función de ajuste de diseño al redimensionar la ventana
     $(window).resize(adjustLayout);
 
-    // ao dar rolagem
-    window.onscroll = function () {
-        var scroll = window.scrollY;
+    // Al hacer scroll
+    $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
 
         $("#scroll-animate-main").css({
             top: "-" + scroll + "px"
@@ -59,5 +59,5 @@ $(document).ready(function () {
         });
 
         scrollFooter(scroll);
-    };
+    });
 });

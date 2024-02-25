@@ -1,0 +1,177 @@
+@charset "UTF-8";
+/* Fondo oscuro */
+/* Letras doradas */
+/* Fondo oscuro para los botones */
+/* Fondo oscuro para las celdas de datos */
+/* Fondo oscuro para el hover */
+/* Fondo oscuro para las celdas de encabezado */
+/* Fondo oscuro cuando se selecciona */
+.k2d-semibold {
+  font-family: "K2D";
+  font-weight: 600;
+  font-style: normal;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-btn {
+  font-size: 16px; /* Tamaño de fuente en píxeles */
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+  color: #fff;
+  transition: 0.5s;
+  z-index: 4;
+}
+.menu-btn span {
+  display: block;
+  background-color: #BA966E;
+  height: 3px;
+  width: 30px;
+  margin: 6px 0;
+  transition: 0.5s;
+}
+
+#menu-toggle:checked + .menu-btn span:nth-child(1) {
+  opacity: 0;
+}
+
+#menu-toggle:checked + .menu-btn span:nth-child(2) {
+  transform: rotate(45deg) translate(0, 0);
+}
+
+#menu-toggle:checked + .menu-btn span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+#menu {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5254901961);
+  padding-top: 60px;
+  transition: 0.5s;
+  z-index: 3;
+}
+
+#menu-toggle:checked + .menu-btn + #menu {
+  right: 0;
+}
+
+#menu a {
+  padding: 15px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #BA966E;
+  font-family: "K2D";
+  display: block;
+  transition: 0.3s;
+}
+#menu a:hover {
+  color: #f1f1f1;
+}
+
+body {
+  font-family: "K2D"; /* Usar la fuente K2D para todo el cuerpo */
+  margin: 0;
+  padding: 0;
+  background-color: #222; /* Fondo oscuro */
+  color: #BA966E; /* Letras doradas */
+}
+
+.menu {
+  width: 80%;
+  margin: 50px auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background-color: #444; /* Fondo oscuro para los botones */
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-family: "K2D"; /* Usar la fuente K2D para los botones */
+}
+
+.menu-content {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: transparent; /* Fondo transparente */
+  font-family: "K2D"; /* Usar la fuente K2D para las tablas */
+}
+
+th, td {
+  padding: 15px;
+  border: none; /* Eliminar bordes */
+  text-shadow: 1px 1px 2px rgb(0, 0, 0); /* Sombra en el texto */
+  font-family: "K2D"; /* Usar la fuente K2D para las celdas */
+}
+
+th {
+  background-color: #666; /* Fondo oscuro para las celdas de encabezado */
+}
+
+td {
+  background-color: #888; /* Fondo oscuro para las celdas de datos */
+  font-size: 18px; /* Aumentar el tamaño de la fuente */
+}
+
+tr:hover {
+  background-color: #777; /* Fondo oscuro para el hover */
+}
+
+#menu_entrantes,
+#menu_platos_principales,
+#menu_bebidas {
+  display: none;
+}
+
+#entrantes:checked ~ .menu-content #menu_entrantes,
+#platos_principales:checked ~ .menu-content #menu_platos_principales,
+#bebidas:checked ~ .menu-content #menu_bebidas {
+  display: block;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+input[type=radio] + label.btn {
+  color: #BA966E; /* Letras doradas */
+}
+
+input[type=radio]:checked + label.btn {
+  background-color: #555; /* Fondo oscuro cuando se selecciona */
+}
+
+@media only screen and (max-width: 600px) {
+  .menu {
+    width: 90%;
+  }
+  .btn {
+    display: block;
+    margin: 10px auto;
+  }
+  .menu-content {
+    margin-top: 10px;
+  }
+  table {
+    font-size: 0.8em;
+  }
+}/*# sourceMappingURL=style.css.map */

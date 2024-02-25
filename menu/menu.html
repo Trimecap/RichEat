@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explora el exquisito menú de Rich Eat, desde entrantes hasta platos principales y bebidas.">
+    <title>Rich Eat - Menú</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=K2D:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    <div id="menu">
+        <a href="../index.html">Inicio</a>
+        <a href="../Reserva/reserva.html">Reserva</a>
+        <a href="../SobreNosotros/sobre_nosotros.html">Contacto</a>
+    </div>  
+
+  <div class="menu">
+    <h1>Rich Eat</h1>
+    <input type="radio" id="entrantes" name="menu" checked>
+    <label for="entrantes" class="btn">Entrantes</label>
+    <input type="radio" id="platos_principales" name="menu">
+    <label for="platos_principales" class="btn">Platos Principales</label>
+    <input type="radio" id="bebidas" name="menu">
+    <label for="bebidas" class="btn">Bebidas</label>
+    
+    <div class="menu-content">
+        <div id="menu_entrantes">
+            <h2>Entrantes</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Plato</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ensalada de Langosta</td>
+                        <td>Con vinagreta de mango</td>
+                        <td>$25</td>
+                    </tr>
+                    <tr>
+                        <td>Carpaccio de Ternera</td>
+                        <td>Con rúcula y parmesano</td>
+                        <td>$20</td>
+                    </tr>
+                    <tr>
+                        <td>Gambas al Ajillo</td>
+                        <td>Gambas salteadas con aceite de oliva, ajo y guindilla</td>
+                        <td>$30</td>
+                    </tr>
+                    <tr>
+                        <td>Croquetas de Jamón</td>
+                        <td>Cremosas croquetas caseras de jamón ibérico</td>
+                        <td>$15</td>
+                    </tr>
+                    <tr>
+                        <td>Bruschetta de Tomate y Albahaca</td>
+                        <td>Rebanadas de pan tostado con tomate fresco, albahaca y aceite de oliva</td>
+                        <td>$18</td>
+                    </tr>
+                    <tr>
+                        <td>Tartar de Atún</td>
+                        <td>Atún fresco picado con cebolla roja, aguacate y salsa de soja</td>
+                        <td>$22</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="menu_platos_principales">
+            <h2>Platos Principales</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Plato</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Salmón Glaseado</td>
+                        <td>Con salsa de cítricos y puré de batata</td>
+                        <td>$35</td>
+                    </tr>
+                    <tr>
+                        <td>Solomillo de Ternera</td>
+                        <td>Con reducción de vino tinto</td>
+                        <td>$45</td>
+                    </tr>
+                    <tr>
+                        <td>Risotto de Hongos</td>
+                        <td>Risotto cremoso con una mezcla de champiñones y setas</td>
+                        <td>$25</td>
+                    </tr>
+                    <tr>
+                        <td>Lasaña de Berenjena</td>
+                        <td>Lasaña vegetariana con capas de berenjena, salsa de tomate y queso</td>
+                        <td>$20</td>
+                    </tr>
+                    <tr>
+                        <td>Pollo al Curry</td>
+                        <td>Pollo cocido lentamente en una salsa de curry cremosa</td>
+                        <td>$30</td>
+                    </tr>
+                    <tr>
+                        <td>Pasta Carbonara</td>
+                        <td>Pasta italiana con una salsa cremosa de huevo, panceta y queso parmesano</td>
+                        <td>$18</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div id="menu_bebidas">
+            <h2>Bebidas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Bebida</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Vino Tinto Reserva</td>
+                        <td>Añada 2015</td>
+                        <td>$50</td>
+                    </tr>
+                    <tr>
+                        <td>Champán</td>
+                        <td>Bodega Dom Pérignon</td>
+                        <td>$200</td>
+                    </tr>
+                    <tr>
+                        <td>Margarita</td>
+                        <td>Cóctel de tequila, triple sec, jugo de lima y sal en el borde</td>
+                        <td>$10</td>
+                    </tr>
+                    <tr>
+                        <td>Mojito</td>
+                        <td>Cóctel refrescante con ron, hierbabuena, azúcar, lima y soda</td>
+                        <td>$12</td>
+                    </tr>
+                    <tr>
+                        <td>Gin Tonic</td>
+                        <td>Ginebra premium con tónica y rodaja de limón o pepino</td>
+                        <td>$15</td>
+                    </tr>
+                    <tr>
+                        <td>Café Espresso</td>
+                        <td>Espresso italiano corto y fuerte</td>
+                        <td>$5</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+</body>
+</html>

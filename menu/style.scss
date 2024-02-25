@@ -1,0 +1,190 @@
+
+$dark-bg: #222; 
+$golden-color: #BA966E; 
+$dark-btn-bg: #444; 
+$dark-cell-bg: #888;
+$hover-bg: #777;
+$dark-header-cell-bg: #666;
+$selected-bg: #555; 
+$font-family-k2d: "K2D"; 
+$text-color: #BA966E;
+$menu-link-color: #BA966E;
+$menu-link-hover-color: #f1f1f1;
+.k2d-semibold {
+  font-family: $font-family-k2d;
+  font-weight: 600;
+  font-style: normal;
+}
+
+#menu-toggle {
+    display: none;
+    
+  }
+  
+  .menu-btn {
+    font-size: 16px; 
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+    color: #fff;
+    transition: 0.5s;
+    z-index: 4;
+  
+    span {
+        display: block;
+        background-color: $text-color;
+        height: 3px;
+        width: 30px;
+        margin: 6px 0;
+        transition: 0.5s;
+    }
+  }
+  
+  #menu-toggle:checked + .menu-btn span:nth-child(1) {
+    opacity: 0;
+  }
+  
+  #menu-toggle:checked + .menu-btn span:nth-child(2) {
+    transform: rotate(45deg) translate(0, 0);
+  }
+  
+  #menu-toggle:checked + .menu-btn span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  #menu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #00000086;
+    padding-top: 60px;
+    transition: 0.5s;
+    z-index: 3;
+  }
+  
+  #menu-toggle:checked + .menu-btn + #menu {
+    right: 0;
+  }
+  
+  #menu a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: $menu-link-color;
+    font-family: $font-family-k2d;
+    display: block;
+    transition: 0.3s;
+  
+    &:hover {
+        color: $menu-link-hover-color;
+    }
+  }
+
+
+
+
+body {
+    font-family: $font-family-k2d; 
+    margin: 0;
+    padding: 0;
+    background-color: $dark-bg; 
+    color: $golden-color; 
+}
+
+.menu {
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: $dark-btn-bg; 
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-family: $font-family-k2d; 
+}
+
+.menu-content {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: transparent; 
+    font-family: $font-family-k2d;
+}
+
+th, td {
+    padding: 15px;
+    border: none;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 5); 
+    font-family: $font-family-k2d;
+}
+
+th {
+    background-color: $dark-header-cell-bg; 
+}
+
+td {
+    background-color: $dark-cell-bg; 
+    font-size: 18px; 
+}
+
+tr:hover {
+    background-color: $hover-bg; 
+}
+
+#menu_entrantes,
+#menu_platos_principales,
+#menu_bebidas {
+    display: none;
+}
+
+#entrantes:checked ~ .menu-content #menu_entrantes,
+#platos_principales:checked ~ .menu-content #menu_platos_principales,
+#bebidas:checked ~ .menu-content #menu_bebidas {
+    display: block;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"] + label.btn {
+    color: $golden-color; 
+}
+
+input[type="radio"]:checked + label.btn {
+    background-color: $selected-bg;
+}
+
+@media only screen and (max-width: 600px) {
+    .menu {
+        width: 90%;
+    }
+
+    .btn {
+        display: block;
+        margin: 10px auto;
+    }
+
+    .menu-content {
+        margin-top: 10px;
+    }
+
+    table {
+        font-size: 0.8em;
+    }
+}

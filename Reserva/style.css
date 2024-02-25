@@ -1,5 +1,5 @@
 .k2d-semibold {
-  font-family: "K2D", sans-serif;
+  font-family: "K2D";
   font-weight: 600;
   font-style: normal;
 }
@@ -70,6 +70,7 @@ body {
   color: #BA966E;
   display: block;
   transition: 0.3s;
+  font-family: "K2D";
 }
 #menu a:hover {
   color: #f1f1f1;
@@ -78,6 +79,7 @@ body {
 h2 {
   text-align: left;
   color: #BA966E;
+  font-family: "K2D";
   margin-bottom: 1em;
 }
 
@@ -100,6 +102,7 @@ h2 {
 .reservation-form .form-group label {
   color: white;
   font-size: 0.9em;
+  font-family: "K2D";
 }
 .reservation-form .form-group input[type=text],
 .reservation-form .form-group input[type=email],
@@ -114,6 +117,7 @@ h2 {
   border: none;
   font-size: 1em;
   background-color: #555;
+  font-family: "K2D";
   color: #fff;
 }
 .reservation-form .form-group textarea {
@@ -161,6 +165,7 @@ h2 {
     font-size: 0.9em;
   }
   .reservation-form button[type=submit] {
+    font-family: "K2D";
     padding: 0.5em 1em;
     font-size: 1em;
   }
@@ -197,6 +202,7 @@ footer .footer-social {
 footer .footer-social a {
   margin-right: 10px;
   position: relative;
+  font-family: "K2D";
 }
 footer .footer-social a img {
   max-width: 100%;
